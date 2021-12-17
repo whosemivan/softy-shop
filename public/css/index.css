@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  background-color: #FBF6FB;
+  height: 200vh;
+}
+
+.content-container {
+  width: 280px;
+}
+
+.flex-helper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-panel {
+  z-index: 5;
+  position: fixed;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.menu-panel__nav-box {
+  margin: 5% 0;
+}
+
+.menu-panel__search {
+  border-radius: 0;
+  outline: none;
+  padding: 10px 5px;
+}
+
+.navigation-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-nav {
+  display: none;
+  position: absolute;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #DCCAC6;
+}
+
+.header-body {
+  height: 100vh;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.header-body__text {
+  font-size: 50px;
+  line-height: calc(100% + 20px);
+  letter-spacing: 5px;
+}
+
+.header-body__discription {
+  padding-top: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  left: 20%;
+}
+
+.header-body__link {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.header-body__link-img {
+  padding-left: 15px;
+}
