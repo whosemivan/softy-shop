@@ -1,2 +1,6 @@
-// Стили сайта
-@import "./body";
+@import "variables";
+@import "mixins";
+@import "global/body";
+@import "global/fonts";
+@import "global/global";
+@import "blocks/nav-style";
