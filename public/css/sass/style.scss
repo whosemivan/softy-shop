@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
-@import "global/body";
 @import "global/fonts";
 @import "global/global";
-@import "blocks/nav-style";
+@import "global/body";
+@import "blocks/main-nav";
+@import "blocks/header";

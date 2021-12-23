@@ -1,0 +1,32 @@
+.main-nav {
+    margin-bottom: 25px;
+    min-height: 230px;
+}
+
+.main-nav__item {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid $black;
+    &:last-child {
+        border-bottom: 2px solid $black;
+    }
+}
+
+.main-nav__link {
+    color: $black;
+    font-size: 18px;
+}
+
+.main-nav__list {
+    @include list;
+    opacity: 1;
+}
+
+.main-nav__image {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}

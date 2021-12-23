@@ -1,7 +1,95 @@
-header {
-  width: 100%;
-  height: 100vh;
-  background-color: #DCCAC6;
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+  src: url("../../fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: regular;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik Bold";
+  src: url("../../fonts/Rubik/Rubik-Bold.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik Medium";
+  src: url("../../fonts/Rubik/Rubik-Medium.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../../fonts/Rubik/Rubik-Regular.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 320px;
+  font-family: "Rubik Regular", sans-serif;
+  font-size: 18px;
+  color: #000;
+  background-color: #dccac6;
+}
+
+a,
+input,
+button {
+  font-family: "Rubik Regular";
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.flex-helper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header-body {
@@ -179,176 +267,141 @@ header {
   margin: 0 20px;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
-  src: url("../../fonts/Montserrat/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: regular;
-  font-display: swap;
+.main-nav {
+  margin-bottom: 25px;
+  min-height: 230px;
 }
 
-@font-face {
-  font-family: "Rubik Bold";
-  src: url("../../fonts/Rubik/Rubik-Bold.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Bold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik Medium";
-  src: url("../../fonts/Rubik/Rubik-Medium.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik Regular";
-  src: url("../../fonts/Rubik/Rubik-Regular.woff2") format("woff2"), url("../../fonts/Rubik/Rubik-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  min-width: 320px;
-  font-family: "Rubik Regular", sans-serif;
-  font-size: 18px;
-  color: #000;
-  background-color: #FBF6FB;
-}
-
-a, input, button {
-  font-family: "Rubik Regular";
-  font-weight: 400;
-  font-size: 18px;
-  text-decoration: none;
-  color: #000;
-}
-
-.flex-helper {
+.main-nav__item {
+  min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 2px solid #000405;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.main-nav__item:last-child {
+  border-bottom: 2px solid #000405;
 }
 
-.navigation {
-  z-index: 5;
-  position: fixed;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-}
-
-.navigation__panel {
-  z-index: 5;
-  width: 87.5%;
-  margin-top: 20px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  pointer-events: all;
-}
-
-.navigation__container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 15px;
-}
-
-.navigation__nav-button, .navigation__nav-button::before, .navigation__nav-button::after {
-  padding: 0;
-  width: 29px;
-  height: 3px;
-  display: block;
-  position: relative;
-  border: none;
-  background-color: #000405;
-}
-
-.navigation__nav-button::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-}
-
-.navigation__nav-button::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-}
-
-.navigation__search {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -20px;
-  border-radius: 0;
-  border: 2px solid #000405;
-  outline: none;
-  padding: 10px 5px;
-  font-size: 16px;
-}
-
-.navigation__bg {
-  z-index: 4;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
-  opacity: 0;
-  -webkit-transition: opacity .25s;
-  transition: opacity .25s;
-}
-
-.navigation .navigation--blur {
-  opacity: 1;
-}
-
-.navigation .main-nav--show {
-  height: 100%;
-}
-
-.main-nav {
-  height: 0;
-  overflow: hidden;
-  font-size: 24px;
-  line-height: 50px;
-  -webkit-transition: height .25s;
-  transition: height .25s;
+.main-nav__link {
+  color: #000405;
+  font-size: 18px;
 }
 
 .main-nav__list {
-  padding: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+}
+
+.main-nav__image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.header {
+  min-height: 128px;
+}
+
+.header__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.header__btn {
+  width: 29px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.header__btn span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000405;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.header__btn span:nth-child(1) {
+  top: 0;
+}
+
+.header__btn span:nth-child(2),
+.header__btn span:nth-child(3) {
+  top: 8px;
+}
+
+.header__btn span:nth-child(4) {
+  top: 16px;
+}
+
+.header__btn--opened span:nth-child(1) {
+  top: 16px;
+  width: 0%;
+  left: 50%;
+}
+
+.header__btn--opened span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__btn--opened span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header__btn--opened span:nth-child(4) {
+  top: 16px;
+  width: 0%;
+  left: 50%;
+}
+
+.header__form {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.header__search {
+  background-color: #fbf6fb;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 0;
+  width: 100%;
 }
