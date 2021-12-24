@@ -79,22 +79,10 @@
                 </div>
             </div>
 
-            <div class="cards__link-wrapper flex-helper"><a href="" class="cards__link">Смотреть все</a></div>
+            <div class="cards__link-wrapper flex-helper"><a href="/catalog" class="cards__link">Смотреть все</a></div>
         </section>
 
-        <section class="main-body__form form flex-helper">
-            <form action="" class="flex-helper">
-                <label for="email">Подпишись на полезную рассылку и получи 30% скидку</label>
-                <input type="text" name="email" placeholder="E-mail" id="form__input">
-                <button id="form__accept">Подписаться</button>
-            </form>
-            <img src="./img/main/img-form.jpg" alt="decorate img for form">
-        </section>
+        {{> sub_block}}
     </div>
 </main>
-
-<footer class="footer flex-helper">
-    <a href="" class="footer__icon">IN</a>
-    <a href="" class="footer__icon">VK</a>
-    <a href="" class="footer__icon">TW</a>
-</footer>
+{{> footer}}

@@ -6,6 +6,108 @@
     </section>
     <section class="catalog">
         <h2 class="catalog__title visually-hidden">Наши предложения</h2>
-        
+        <div class="catalog__filter">
+            <div class="catalog__filter-sort">
+                <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
+                <select class="catalog__filter-sort-select" name="sort" id="sort">
+                    <option value="freshness">Новинки</option>
+                    <option value="priceincr">Цена по возрастанию</option>
+                    <option value="pricedecr">Цена по убыванию</option>
+                </select>
+            </div>
+            <div class="catalog__filter-filter">
+                <button class="catalog__filter-filter-btn" type="button">Фильтер</button>
+            </div>
+        </div>
+
+        <ul class="catalog__list">
+            <li class="catalog__item">
+                <picture>
+                    <source srcset="img/main/img-card-1.jpg" media="(max-width: 767px)">
+                    <img src="img/main/img-card-1.jpg" alt="Фото пижамы">
+                </picture>
+                <div class="catalog__item-panel">
+                    <div class="catalog__item-wrapper">
+                        <h3 class="catalog__item-title">
+                            Жёлтый сон
+                        </h3>
+                        <span class="catalog__item-price">50 $</span>
+                    </div>
+                    <button>
+                        <span class="visually-hidden">Добавить в корзину</span>
+                    </button>
+                    <button>
+                        <span class="visually-hidden">Добавить в избранное</span>
+                    </button>
+                </div>
+            </li>
+            <li class="catalog__item">
+                <picture>
+                    <source srcset="img/main/img-card-2.jpg" media="(max-width: 767px)">
+                    <img src="img/main/img-card-1.jpg" alt="Фото пижамы">
+                </picture>
+                <div class="catalog__item-panel">
+                    <div class="catalog__item-wrapper">
+                        <h3 class="catalog__item-title">
+                            Пижама Кинг-Конг
+                        </h3>
+                        <span class="catalog__item-price">60 $</span>
+                    </div>
+                    <button>
+                        <span class="visually-hidden">Добавить в корзину</span>
+                    </button>
+                    <button>
+                        <span class="visually-hidden">Добавить в избранное</span>
+                    </button>
+                </div>
+            </li>
+            {{!-- special card --}}
+            <li class="catalog__item catalog__item--specail">
+                <picture>
+                    <source srcset="img/main/img-card-3.jpg" media="(max-width: 767px)">
+                    <img src="img/main/img-card-3.jpg" alt="Фото пижамы">
+                </picture>
+                <div class="catalog__item-panel">
+                    <div class="catalog__item-wrapper">
+                        <h3 class="catalog__item-title">
+                            Набор пижама "треп аллигаторы"
+                        </h3>
+                        <span class="catalog__item-price">60 $</span>
+                    </div>
+                    <button>
+                        <span class="visually-hidden">Добавить в корзину</span>
+                    </button>
+                    <button>
+                        <span class="visually-hidden">Добавить в избранное</span>
+                    </button>
+                </div>
+                <div class="catalog__item-special">
+                    <span>Хит продаж</span>
+                    <span>Специальное предложение</span>
+                </div>
+            </li>
+            <li class="catalog__item">
+                <picture>
+                    <source srcset="img/main/img-card-2.jpg" media="(max-width: 767px)">
+                    <img src="img/main/img-card-1.jpg" alt="Фото пижамы">
+                </picture>
+                <div class="catalog__item-panel">
+                    <div class="catalog__item-wrapper">
+                        <h3 class="catalog__item-title">
+                            Пижама Кинг-Конг
+                        </h3>
+                        <span class="catalog__item-price">60 $</span>
+                    </div>
+                    <button>
+                        <span class="visually-hidden">Добавить в корзину</span>
+                    </button>
+                    <button>
+                        <span class="visually-hidden">Добавить в избранное</span>
+                    </button>
+                </div>
+            </li>
+        </ul>
     </section>
+    {{> sub_block}}
 </main>
+{{> footer}}
