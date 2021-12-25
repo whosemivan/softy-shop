@@ -1,33 +1,35 @@
-<main class="main">
-    <section class="catalog-first-screen flex-helper">
-        <h1 class="catalog-first-screen__title">Новая коллекция</h1>
-        <p class="catalog-first-screen__text">Пижама мягкая как сны</p>
-        <a class="catalog-first-screen__link" href="#">Смотреть</a>
-    </section>
-    <section class="catalog">
-        <h2 class="catalog__title visually-hidden">Наши предложения</h2>
-        <div class="catalog__filter">
-            <div class="catalog__filter-sort">
-                <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
-                <select class="catalog__filter-sort-select" name="sort" id="sort">
-                    <option value="freshness">Новинки</option>
-                    <option value="priceincr">Цена по возрастанию</option>
-                    <option value="pricedecr">Цена по убыванию</option>
-                </select>
+<main class="main flex-helper">
+    <div class="main-body flex-helper">
+        <section class="catalog-first-screen flex-helper">
+            <h1 class="catalog-first-screen__title">Новая коллекция</h1>
+            <p class="catalog-first-screen__text">Пижама мягкая как сны</p>
+            <a class="catalog-first-screen__link" href="#">Смотреть</a>
+        </section>
+        <section class="catalog">
+            <h2 class="catalog__title visually-hidden">Наши предложения</h2>
+            <div class="catalog__filter">
+                <div class="catalog__filter-sort">
+                    <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
+                    <select class="catalog__filter-sort-select" name="sort" id="sort">
+                        <option value="freshness">Новинки</option>
+                        <option value="priceincr">Цена по возрастанию</option>
+                        <option value="pricedecr">Цена по убыванию</option>
+                    </select>
+                </div>
+                <div class="catalog__filter-filter">
+                    <button class="catalog__filter-filter-btn" type="button">Фильтер</button>
+                </div>
             </div>
-            <div class="catalog__filter-filter">
-                <button class="catalog__filter-filter-btn" type="button">Фильтер</button>
-            </div>
-        </div>
 
-        <div class="cards__items">
-            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
-            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
-            {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/main/img-card-3.jpg"}}
-            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
-            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
-        </div>
-    </section>
-    {{> sub_block}}
+            <div class="cards__items">
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+                {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/main/img-card-3.jpg"}}
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+            </div>
+        </section>
+        {{> sub_block}}
+    </div>
 </main>
 {{> footer}}
