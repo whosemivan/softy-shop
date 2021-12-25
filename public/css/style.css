@@ -51,7 +51,7 @@ body {
   min-width: 320px;
   font-family: "Rubik Regular", sans-serif;
   font-size: 18px;
-  color: #000;
+  color: #000405;
   background-color: #dccac6;
 }
 
@@ -62,7 +62,7 @@ button {
   font-weight: 400;
   font-size: 18px;
   text-decoration: none;
-  color: #000;
+  color: #000405;
 }
 
 .flex-helper {
@@ -90,6 +90,14 @@ button {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.main {
+  background-color: #fbf6fb;
+}
+
+.body-catalog {
+  background-color: #fbf6fb;
 }
 
 .header-body {
@@ -268,7 +276,6 @@ button {
 }
 
 .main-nav {
-  margin-bottom: 25px;
   min-height: 230px;
 }
 
@@ -395,7 +402,7 @@ button {
 .header__form {
   width: 280px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .header__search {
@@ -404,4 +411,64 @@ button {
   border: none;
   border-radius: 0;
   width: 100%;
+}
+
+.header__search--catalog {
+  background-color: #dccac6;
+}
+
+.catalog-first-screen {
+  width: 280px;
+  min-height: 300px;
+  margin: 0 auto;
+  color: #fbf6fb;
+  background-image: url("../../../img/main/catalog-image.jpg");
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.catalog-first-screen__title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.catalog-first-screen__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.catalog-first-screen__link {
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  position: relative;
+  color: #fbf6fb;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.catalog-first-screen__link::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 94px;
+  background: #fbf6fb;
+  bottom: 0;
+}
+
+.catalog__filter {
+  width: 100%;
+  background-color: #dccac6;
 }

@@ -74,7 +74,7 @@
 .header__form {
     width: 280px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .header__search {
@@ -83,4 +83,8 @@
     border: none;
     border-radius: 0;
     width: 100%;
+}
+
+.header__search--catalog {
+    background-color: $mainColor;
 }

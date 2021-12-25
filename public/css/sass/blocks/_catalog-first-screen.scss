@@ -1,0 +1,47 @@
+.catalog-first-screen {
+    width: 280px;
+    min-height: 300px;
+    margin: 0 auto;
+    color: $white;
+    background-image: url("../../../img/main/catalog-image.jpg");
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.catalog-first-screen__title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.catalog-first-screen__text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.catalog-first-screen__link {
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    position: relative;
+    color: $white;
+    margin: 0;
+    margin-bottom: 15px;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 94px;
+        background: $white;
+        bottom: 0;
+    }
+}

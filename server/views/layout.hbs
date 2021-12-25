@@ -11,7 +11,7 @@
     <title>{{{title}}}</title>
 </head>
 
-<body>
+<body class={{className}}>
     <header class="header">
         <div class="header__wrapper">
             <a href="header__logo">
@@ -42,7 +42,7 @@
         </nav>
         <form class="header__form">
             <label for="search" class=" header__label visually-hidden">Поиск</label>
-            <input class="header__search {{className}}" type="search" name="search" id="search" placeholder="Поиск...">
+            <input class="header__search header__search--catalog" type="search" name="search" id="search" placeholder="Поиск...">
         </form>
     </header>
     {{{body}}}
