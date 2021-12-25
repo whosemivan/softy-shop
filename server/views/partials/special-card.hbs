@@ -1,0 +1,20 @@
+<div class="cards__item cards__item_big-h cards__item_big-w">
+    <picture>
+        <source srcset={{imageSrc}} media="(max-width: 767px)">
+        <img src={{imageSrc}} alt="Фото примера пижамы">
+    </picture>
+    <div class="item__body flex-helper">
+        <div class="item__content-wrapper">
+            <h2 class="item__title">{{titleCard}}</h2>
+            <span class="item__cost">{{costCard}}</span>
+        </div>
+        <div class="item__content-wrapper">
+            <button>
+                <span class="visually-hidden">Добавить в корзину</span>
+            </button>
+            <button>
+                <span class="visually-hidden">Добавить в избранное</span>
+            </button>
+        </div>
+    </div>
+</div>

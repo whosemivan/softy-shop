@@ -12,71 +12,15 @@
         <section class="main-body__cards cards">
             <h1 class="cards__title">Популярные пижамы</h1>
             <div class="cards__items">
-                <div class="cards__item item">
-                    <img src="./img/main/img-card-1.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Жёлтый сон</h2>
-                            <p class="item__cost">50 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-2.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Пижама Кинг-Конг</h2>
-                            <p class="item__cost">120 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item cards__item_big-h cards__item_big-w">
-                    <img src="./img/main/img-card-3.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Набор Золотая лагуна сноведений</h2>
-                            <p class="item__cost">1100 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-1.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Жёлтый сон</h2>
-                            <p class="item__cost">50 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-2.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Пижама Кинг-Конг</h2>
-                            <p class="item__cost">120 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
+
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+
+                {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/main/img-card-3.jpg"}}
+
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
             </div>
 
             <div class="cards__link-wrapper flex-helper"><a href="/catalog" class="cards__link">Смотреть все</a></div>
