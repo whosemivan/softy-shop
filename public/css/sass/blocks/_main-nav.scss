@@ -1,5 +1,5 @@
 .main-nav {
-    min-height: 230px;
+    margin-bottom: 25px;
 }
 
 .main-nav__item {
@@ -15,7 +15,7 @@
 
 .main-nav__link {
     color: $black;
-    font-size: 18px;
+    font-size: $text-mb;
 }
 
 .main-nav__list {

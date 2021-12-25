@@ -3,7 +3,7 @@ body {
     margin: 0;
     min-width: 320px;
     font-family: "Rubik Regular", sans-serif;
-    font-size: 18px;
+    font-size: $text-mb;
     color: $black;
     background-color: $mainColor;
 }
@@ -14,7 +14,7 @@ input,
 button {
     font-family: "Rubik Regular";
     font-weight: 400;
-    font-size: 18px;
+    font-size: $text-mb;
     text-decoration: none;
     color: $black;
 }
