@@ -1,100 +1,33 @@
-<header class="flex-helper">
-    <div class="header-body flex-helper">
-        <h1 class="header-body__title">
-            Самая уютная пижама на свете
-        </h1>
-        <a href="" class="header-body__link">Узнать больше</a>
+<main class="main flex-helper">
+    <div class="main-header flex-helper">
+        <section class="main-header__image-wrapper">
+            <h1 class="visually-hidden">Картинка для tablet и pc версий главной страницы</h1>
+        </section>
+        <section class="main-header__title-wrapper">
+            <h1 class="visually-hidden">Заголовок heder-а</h1>
+            <h1 class="main-header__title">
+                Самая уютная пижама на свете
+            </h1>
+            <a href="" class="main-header__link">Узнать больше</a>
+        </section>
     </div>
-</header>
-
-<main class="flex-helper">
-    <div class="main-body flex-helper">
+    <div class="main-body">
         <section class="main-body__cards cards">
             <h1 class="cards__title">Популярные пижамы</h1>
             <div class="cards__items">
-                <div class="cards__item item">
-                    <img src="./img/main/img-card-1.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Жёлтый сон</h2>
-                            <p class="item__cost">50 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-2.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Пижама Кинг-Конг</h2>
-                            <p class="item__cost">120 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item cards__item_big-h cards__item_big-w">
-                    <img src="./img/main/img-card-3.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Набор Золотая лагуна сноведений</h2>
-                            <p class="item__cost">1100 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-1.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Жёлтый сон</h2>
-                            <p class="item__cost">50 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cards__item">
-                    <img src="./img/main/img-card-2.jpg" alt="Фото примера пижамы">
-                    <div class="item__body flex-helper">
-                        <div class="item__content-wrapper">
-                            <h2 class="item__title">Пижама Кинг-Конг</h2>
-                            <p class="item__cost">120 $</p>
-                        </div>
-                        <div class="item__content-wrapper">
-                            <div class="item__link">B</div>
-                            <div class="item__link">H</div>
-                        </div>
-                    </div>
-                </div>
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
+
+                {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/cards/card3-image.jpg"}}
+
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
             </div>
 
-            <div class="cards__link-wrapper flex-helper"><a href="" class="cards__link">Смотреть все</a></div>
+            <div class="cards__link-wrapper flex-helper"><a href="/catalog" class="cards__link">Смотреть все</a></div>
         </section>
 
-        <section class="main-body__form form flex-helper">
-            <form action="" class="flex-helper">
-                <label for="email">Подпишись на полезную рассылку и получи 30% скидку</label>
-                <input type="text" name="email" placeholder="E-mail" id="form__input">
-                <button id="form__accept">Подписаться</button>
-            </form>
-            <img src="./img/main/img-form.jpg" alt="decorate img for form">
-        </section>
+        {{> sub_block}}
     </div>
 </main>
-
-<footer class="footer flex-helper">
-    <a href="" class="footer__icon">IN</a>
-    <a href="" class="footer__icon">VK</a>
-    <a href="" class="footer__icon">TW</a>
-</footer>
+{{> footer}}

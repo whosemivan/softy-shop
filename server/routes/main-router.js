@@ -6,4 +6,11 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/catalog", (req, res) => {
+    res.render("catalog", {
+        title: "Каталог",
+        className: "body-catalog"
+    });
+});
+
 module.exports = router;
