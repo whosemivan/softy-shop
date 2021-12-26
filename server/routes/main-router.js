@@ -9,7 +9,8 @@ router.get("/", (req, res) => {
 router.get("/catalog", (req, res) => {
     res.render("catalog", {
         title: "Каталог",
-        className: "body-catalog"
+        className: "body-catalog",
+        searchClassName: "header__search--catalog"
     });
 });
 

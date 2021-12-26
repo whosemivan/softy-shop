@@ -13,23 +13,14 @@
         display: grid;
         gap: 28px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        width: 280px;
+        margin: 0 auto;
+        margin-top: 30px;
     }
     &__item {
         position: relative;
         margin-bottom: 35px;
         padding: 0px 0px 95% 0px;
-        @media (max-width: 767px) {
-            &_big {
-                min-height: 50vh;
-                grid-row: span 2;
-            }
-        }
-        @media (min-width: 768px) {
-            &_big {
-                grid-row: span 2;
-                grid-column: span 2;
-            }
-        }
     }
     &__item img {
         width: 100%;
@@ -88,5 +79,19 @@
         font-family: "Rubik Medium";
         font-weight: 400;
         font-size: $text-mb;
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .cards__item_big {
+        min-height: 50vh;
+        grid-row: span 2;
+    }
+}
+
+@media (min-width: $tabletWidth) {
+    .cards__item_big {
+        grid-row: span 2;
+        grid-column: span 2;
     }
 }
