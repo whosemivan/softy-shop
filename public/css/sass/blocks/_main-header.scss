@@ -1,0 +1,60 @@
+.main-header {
+    width: 100%;
+    min-height: calc(100vh - 146px);
+    text-align: center;
+    background-color: $mainColor;
+    &__image-wrapper {
+        display: none;
+    }
+    &__title-wrapper {
+        width: 280px;
+        margin: auto;
+    }
+    &__title {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: $title-mb;
+        line-height: calc(100% + 20px);
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    &__link {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+
+@media (min-width: $width-tb) {
+    .main-header {
+        &__image-wrapper {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url("../../../img/main-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &__title-wrapper {
+            width: 50%;
+            margin: auto;
+            margin-right: 0;
+        }
+        &__title {
+            width: 277px;
+        }
+    }
+}
+@media (min-width: $width-pc) {
+    .main-header {
+        &__title {
+            width: 367px;
+            font-size: $title-pc;
+        }
+    }
+}

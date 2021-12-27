@@ -4,6 +4,9 @@
     margin: 0 auto;
     color: $white;
     background-image: url("../../../img/catalog-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     justify-content: center;
 }
 
@@ -39,9 +42,32 @@
         content: "";
         position: absolute;
         height: 2px;
-        width: 94px;
+        width: 100%;
         background: $white;
         bottom: 0;
         bottom: -3px;
+    }
+}
+
+
+@media (min-width: $width-tb) {
+    .catalog-first-screen {
+        width: 708px;
+        height: 445px;
+    }
+    .catalog-first-screen__title {
+        font-size: 35px;
+    }
+    .catalog-first-screen__text, .catalog-first-screen__link {
+        font-size: 20px;
+    }
+}
+@media (min-width: $width-pc) {
+    .catalog-first-screen {
+        width: 1280px;
+        height: 445px;
+    }
+    .catalog-first-screen__title {
+        font-size: 64px;
     }
 }

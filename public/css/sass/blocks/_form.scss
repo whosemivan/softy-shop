@@ -36,6 +36,7 @@
             width: 377px;
             margin: auto;
             margin-right: 30px;
+            font-size: $subtitle-pc;
         }
     }
     .form img {
@@ -43,12 +44,16 @@
     }
 }
 @media (min-width: $width-pc) {
-    .form {
-        form {
-            width: 585px;
-            margin-right: auto;
-        }
+    .form form {
+        font-size: $subtitle-pc;
+        width: 585px;
+        margin-right: auto;
     }
+
+    #form__input, #form__accept {
+        font-size: 20px;
+    }
+
     .form img {
         width: 390px;
     }

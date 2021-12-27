@@ -1,19 +1,16 @@
 <main class="main flex-helper">
-    <div class="main-header flex-helper">
+    <div class="main-header">
         <section class="main-header__image-wrapper">
             <h1 class="visually-hidden">Картинка для tablet и pc версий главной страницы</h1>
         </section>
         <section class="main-header__title-wrapper">
-            <h1 class="visually-hidden">Заголовок heder-а</h1>
-            <h1 class="main-header__title">
-                Самая уютная пижама на свете
-            </h1>
+            <h1 class="main-header__title">Самая уютная пижама на свете</h1>
             <a href="" class="main-header__link">Узнать больше</a>
         </section>
     </div>
     <div class="main-body">
         <section class="main-body__cards cards">
-            <h1 class="cards__title">Популярные пижамы</h1>
+            <h1 class="cards__title"><span>Популярные</span><span class="cards__title-word-right">пижамы</span></h1>
             <div class="cards__items">
                 {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
                 {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
