@@ -1,6 +1,7 @@
 .form {
     margin-top: 70px;
     form {
+        width: 280px;
         margin-bottom: 50px;
         min-width: 280px;
         max-width: 585px;
@@ -32,6 +33,7 @@
         flex-direction: row;
         justify-content: space-between;
         form {
+            width: 377px;
             margin: auto;
             margin-right: 30px;
         }
@@ -43,6 +45,7 @@
 @media (min-width: $width-pc) {
     .form {
         form {
+            width: 585px;
             margin-right: auto;
         }
     }

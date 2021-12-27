@@ -1,4 +1,7 @@
 .cards {
+    display: flex;
+    flex-direction: column;
+
     &__title {
         margin: 0;
         font-family: "Rubik Bold";
@@ -8,11 +11,12 @@
         text-align: center;
     }
     &__items {
+        margin: auto;
         margin-top: 35px;
         margin-bottom: 35px;
         display: grid;
         gap: 28px;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(1, 280px);
     }
     &__item {
         position: relative;
@@ -81,14 +85,30 @@
 
 @media (max-width: $max-width-mb) {
     .cards__item_big {
-        min-height: 50vh;
+        padding: 0 0 450px 0;
         grid-row: span 2;
     }
 }
 
 @media (min-width: $width-tb) {
     .cards__item_big {
-        padding: 0;
+        padding: 0 0 380px 0;
         grid-column: span 2;
+    }
+    
+    .cards__items {
+        grid-template-columns: repeat(2, 340px);
+    }
+}
+
+@media (min-width: $width-pc) {
+    .cards__item_big {
+        padding: 0 0 344px 0;
+        grid-column: span 2;
+    }
+    
+    .cards__items {
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(3, 390px);
     }
 }
