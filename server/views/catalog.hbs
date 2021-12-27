@@ -1,13 +1,13 @@
 <main class="main flex-helper">
-    <div class="main-body flex-helper">
-        <section class="catalog-first-screen flex-helper">
-            <h1 class="catalog-first-screen__title">Новая коллекция</h1>
-            <p class="catalog-first-screen__text">Пижама мягкая как сны</p>
-            <a class="catalog-first-screen__link" href="#">Смотреть</a>
-        </section>
-        <section class="catalog">
-            <h2 class="catalog__title visually-hidden">Наши предложения</h2>
-            <div class="catalog__filter">
+    <section class="catalog-first-screen flex-helper">
+        <h1 class="catalog-first-screen__title">Новая коллекция</h1>
+        <p class="catalog-first-screen__text">Пижама мягкая как сны</p>
+        <a class="catalog-first-screen__link" href="#">Смотреть</a>
+    </section>
+    <section class="catalog">
+        <h2 class="catalog__title visually-hidden">Наши предложения</h2>
+        <div class="catalog__filter">
+            <div class="catalog__filter-wrapper">
                 <div class="catalog__filter-sort">
                     <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
                     <select class="catalog__filter-sort-select" name="sort" id="sort">
@@ -17,21 +17,20 @@
                     </select>
                 </div>
                 <div class="catalog__filter-filter">
-                    <button class="catalog__filter-filter-btn" type="button">Фильтер</button>
+                    <button class="catalog__filter-filter-btn" type="button">Фильтр</button>
                 </div>
             </div>
+        </div>
 
-            <div class="cards__items">
-                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
-                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
-
-                {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/cards/card3-image.jpg"}}
-
-                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
-                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
-            </div>
-        </section>
-        {{> sub_block}}
-    </div>
+        <div class="cards__items">
+            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+            {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $"
+            imageSrc="./img/main/img-card-3.jpg"}}
+            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/main/img-card-1.jpg"}}
+            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/main/img-card-2.jpg"}}
+        </div>
+    </section>
+    {{> sub_block}}
 </main>
 {{> footer}}

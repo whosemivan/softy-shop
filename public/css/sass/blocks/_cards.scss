@@ -79,23 +79,16 @@
 }
 
 
-@media (min-width: $width-mb) {
-    .cards {
-        &__item {
-            &_big {
-                min-height: 50vh;
-                grid-row: span 2;
-            }
-        }
+@media (max-width: $mobile-max-width) {
+    .cards__item_big {
+        min-height: 50vh;
+        grid-row: span 2;
     }
 }
+
 @media (min-width: $width-tb) {
-    .cards {
-        &__item {
-            &_big {
-                padding: 0;
-                grid-column: span 2;
-            }
-        }
+    .cards__item_big {
+        padding: 0;
+        grid-column: span 2;
     }
 }
