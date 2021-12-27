@@ -1,5 +1,4 @@
 .cards {
-    margin-bottom: 50px;
     &__title {
         margin: 0;
         font-family: "Rubik Bold";
@@ -10,17 +9,14 @@
     }
     &__items {
         margin-top: 35px;
+        margin-bottom: 35px;
         display: grid;
         gap: 28px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        width: 280px;
-        margin: 0 auto;
-        margin-top: 30px;
     }
     &__item {
         position: relative;
-        margin-bottom: 35px;
-        padding: 0px 0px 95% 0px;
+        padding: 0 0 100% 0;
     }
     &__item img {
         width: 100%;
@@ -50,15 +46,10 @@
         flex-direction: row;
         justify-content: center
     }
-    &__top-panel-title {
-        font-family: "Rubik Bold";
-        font-weight: 400;
-        font-size: $text-mb;
-        margin: 0;
-    }
     &__body {
         position: absolute;
         bottom: 0;
+        padding: 5px 0;
         min-height: 60px;
         width: 100%;
         flex-direction: row;
@@ -66,6 +57,7 @@
         background-color: $mainColor;
     }
     &__content-wrapper {
+        min-width: 70px;
         padding: 0 10px;
     }
     &__title {
@@ -80,7 +72,12 @@
         font-weight: 400;
         font-size: $text-mb;
     }
+    &__btn {
+        border: none;
+        background-color: transparent;
+    }
 }
+
 
 @media (max-width: $mobile-max-width) {
     .cards__item_big {
@@ -89,9 +86,9 @@
     }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $width-tb) {
     .cards__item_big {
-        grid-row: span 2;
+        padding: 0;
         grid-column: span 2;
     }
 }

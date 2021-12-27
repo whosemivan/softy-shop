@@ -3,7 +3,7 @@
     min-height: 300px;
     margin: 0 auto;
     color: $white;
-    background-image: url("../../../img/main/catalog-image.jpg");
+    background-image: url("../../../img/catalog-image.jpg");
     justify-content: center;
     margin-bottom: 30px;
 }
@@ -42,6 +42,7 @@
         height: 2px;
         width: 94px;
         background: $white;
+        bottom: 0;
         bottom: -3px;
     }
 }

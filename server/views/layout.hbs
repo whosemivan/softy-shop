@@ -16,8 +16,8 @@
         <div class="header__wrapper">
             <a href="header__logo">
                 <picture>
-                    <source srcset="img/logo.svg" media="(max-width: 767px)">
-                    <img src="img/logo.svg" alt="Логотип «Softy Shop»">
+                    <source srcset="./img/logo.svg" media="(max-width: 767px)">
+                    <img src="./img/logo.svg" alt="Логотип «Softy Shop»">
                 </picture>
             </a>
             <button class="header__btn header__btn--close" type="button">
@@ -42,11 +42,11 @@
         </nav>
         <form class="header__form">
             <label for="search" class=" header__label visually-hidden">Поиск</label>
-            <input class="header__search {{searchClassName}}" type="search" name="search" id="search" placeholder="Поиск...">
+            <input class="header__search header__search--catalog" type="search" name="search" id="search" placeholder="Поиск...">
         </form>
     </header>
     {{{body}}}
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
