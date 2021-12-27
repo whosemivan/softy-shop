@@ -79,7 +79,7 @@
 }
 
 
-@media (max-width: $mobile-max-width) {
+@media (max-width: $max-width-mb) {
     .cards__item_big {
         min-height: 50vh;
         grid-row: span 2;
