@@ -22,14 +22,20 @@
             </div>
         </div>
 
-        <div class="cards__items">
-            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
-            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
+        <section class="cards">
+            <h1 class="cards__title">Популярные пижамы</h1>
+            <div class="cards__items">
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
 
-            {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/cards/card3-image.jpg"}}
+                {{> special_card titleCard="Набор Золотая лагуна сноведений" costCard="1100 $" imageSrc="./img/cards/card3-image.jpg"}}
 
-            {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
-            {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
+                {{> card titleCard="Жёлтый сон" costCard="50 $" imageSrc="./img/cards/card1-image.jpg"}}
+                {{> card titleCard="Пижама Кинг-Конг" costCard="120 $" imageSrc="./img/cards/card2-image.jpg"}}
+            </div>
+
+            <div class="cards__link-wrapper flex-helper"><a href="/catalog" class="cards__link">Смотреть все</a></div>
+        </section>
     </section>
     {{> sub_block}}
 </main>

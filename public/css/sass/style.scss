@@ -2,11 +2,12 @@
 @import "mixins";
 @import "global/fonts";
 @import "global/global";
-@import "global/main-header";
-@import "global/main-body";
+@import "blocks/main-body";
+@import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/header";
 @import "blocks/cards";
+@import "blocks/item";
 @import "blocks/footer";
 @import "blocks/form";
 @import "blocks/catalog-first-screen";

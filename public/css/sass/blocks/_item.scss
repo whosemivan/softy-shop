@@ -1,0 +1,55 @@
+.item {
+    &__top-panel {
+        width: 100%;
+        min-height: 30px;
+        position: absolute;
+        top: 0;
+        background-color: $black;
+        color: $white;
+        font-family: "Rubik Bold", sans-serif;
+        flex-direction: row;
+        justify-content: center
+    }
+    &__body {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 0;
+        min-height: 60px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $mainColor;
+    }
+    &__content-wrapper {
+        min-width: 70px;
+        padding: 0 10px;
+    }
+    &__title {
+        font-family: "Rubik Regular", sans-serif;
+        font-weight: 400;
+        font-size: $text-mb;
+        margin: 0 0 5px 0;
+    }
+    &__cost {
+        margin: 0;
+        font-family: "Rubik Medium", sans-serif;
+        font-weight: 400;
+        font-size: $text-mb;
+    }
+    &__btn {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+
+@media (min-width: $width-tb) {
+    .item__top-panel {
+        font-size: 20px;
+    }
+}
+@media (min-width: $width-pc) {
+    .item__title {
+        font-size: 20px;
+    }
+}

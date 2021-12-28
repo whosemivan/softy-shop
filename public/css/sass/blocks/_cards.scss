@@ -1,18 +1,23 @@
 .cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
     &__title {
         margin: 0;
-        font-family: "Rubik Bold";
+        font-family: "Rubik Bold", sans-serif;
         text-transform: uppercase;
         font-weight: 400;
         font-size: $subtitle-mb;
         text-align: center;
     }
     &__items {
+        margin: auto;
         margin-top: 35px;
         margin-bottom: 35px;
         display: grid;
         gap: 28px;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(1, 280px);
     }
     &__item {
         position: relative;
@@ -35,60 +40,57 @@
     }
 }
 
-.item {
-    &__top-panel {
-        width: 100%;
-        min-height: 30px;
-        position: absolute;
-        top: 0;
-        background-color: $black;
-        color: $white;
-        flex-direction: row;
-        justify-content: center
-    }
-    &__body {
-        position: absolute;
-        bottom: 0;
-        padding: 5px 0;
-        min-height: 60px;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: $mainColor;
-    }
-    &__content-wrapper {
-        min-width: 70px;
-        padding: 0 10px;
-    }
-    &__title {
-        font-family: "Rubik Regular";
-        font-weight: 400;
-        font-size: $text-mb;
-        margin: 0 0 5px 0;
-    }
-    &__cost {
-        margin: 0;
-        font-family: "Rubik Medium";
-        font-weight: 400;
-        font-size: $text-mb;
-    }
-    &__btn {
-        border: none;
-        background-color: transparent;
-    }
-}
-
 
 @media (max-width: $max-width-mb) {
     .cards__item_big {
-        min-height: 50vh;
+        padding: 0 0 450px 0;
         grid-row: span 2;
     }
 }
 
 @media (min-width: $width-tb) {
+    .cards__title {
+        font-size: $subtitle-tb;
+        text-align: left;
+    }
+
     .cards__item_big {
-        padding: 0;
+        padding: 0 0 380px 0;
         grid-column: span 2;
+    }
+    
+    .cards__items {
+        grid-template-columns: repeat(2, 340px);
+    }
+}
+
+@media (min-width: $width-pc) {
+    .cards__title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: $subtitle-pc;
+        text-align: left;
+        width: 316px;
+    }
+
+    .cards__title-word-right {
+        float: right;
+    }
+
+    .cards__item_big {
+        padding: 0 0 344px 0;
+        grid-column: span 2;
+    }
+    
+    .cards__items {
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(3, 390px);
+    }
+
+    .cards__link {
+        position: absolute;
+        top: 23px;
+        right: 0;
+        font-size: 20px;
     }
 }
