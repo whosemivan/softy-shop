@@ -22,4 +22,10 @@ router.get("/my-account", (req, res) => {
     });
 });
 
+router.get("/admin", (req, res) => {
+    res.render("admin", {
+        title: "Админка"
+    });
+});
+
 module.exports = router;

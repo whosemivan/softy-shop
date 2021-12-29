@@ -1,7 +1,7 @@
 const express = require("express");
 const serverRouter = require("./server/routes/main-router");
+const dbRouter = require("./server/routes/dbRouter");
 const hbs = require('hbs');
-const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -14,5 +14,6 @@ app.set("views", "./server/views");
 
 app.use(express.static("./public"));
 app.use("/", serverRouter);
+app.use("/api", dbRouter);
 
 app.listen(port);

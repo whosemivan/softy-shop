@@ -738,3 +738,64 @@ button {
 .catalog__filter-sort-label {
   padding-right: 15px;
 }
+
+.admin {
+  margin: 0 auto;
+  width: 280px;
+  background: transparent;
+}
+
+.admin_title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.admin__input {
+  border: none;
+  border-radius: 0;
+  width: 280px;
+  padding: 10px 5px;
+}
+
+.admin__label {
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.admin__btn {
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  background: #fbf6fb;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.admin__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin__nav-link {
+  color: #000405;
+  text-decoration: underline;
+}
