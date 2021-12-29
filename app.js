@@ -1,10 +1,11 @@
 const express = require("express");
 const serverRouter = require("./server/routes/main-router");
 const dbRouter = require("./server/routes/dbRouter");
+const authRouter = require("./server/routes/authorization/auth-router");
 const hbs = require('hbs');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
@@ -15,5 +16,6 @@ app.set("views", "./server/views");
 app.use(express.static("./public"));
 app.use("/", serverRouter);
 app.use("/api", dbRouter);
+app.use("/auth", authRouter)
 
-app.listen(port);
+app.listen(PORT, (e) => e ? "" : console.log(`PIP, you port ${PORT}`));
