@@ -893,3 +893,55 @@ button {
   color: #000405;
   text-decoration: underline;
 }
+
+.auth-form {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.auth-form__body {
+  background-color: #fbf6fb;
+  width: 280px;
+  min-height: 590px;
+  padding: 10px 0;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth-form__title {
+  padding: 0 25px;
+  text-align: center;
+}
+
+.auth-form__title a {
+  text-decoration: underline;
+}
+
+.auth-form #form__login-input, #form__password-input, #form__name-input, #form__surname-input {
+  width: 100%;
+  margin: 15px 0;
+  padding: 5px 0;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000405;
+  background-color: transparent;
+}
+
+.auth-form #form__accept {
+  border: 2px solid #000405;
+  border-radius: unset;
+  margin-top: 30px;
+  padding: 8px 45px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .auth-form__body {
+    width: 600px;
+  }
+  .auth-form #form__login-input, #form__password-input, #form__name-input, #form__surname-input {
+    width: 377px;
+  }
+}

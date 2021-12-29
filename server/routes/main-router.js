@@ -14,6 +14,17 @@ router.get("/catalog", (req, res) => {
     });
 });
 
+router.get("/auth/:form", (req, res) => {
+    let forms = {
+        "login": "login_form",
+        "registration": "registration_form"
+    };
+    res.render(forms[req.params.form], {
+        title: "Авторизация",
+        classNameForNav: "visually-hidden"
+    });
+});
+
 router.get("/my-account", (req, res) => {
     res.render("my-account", {
         title: "Личный кабинет",
