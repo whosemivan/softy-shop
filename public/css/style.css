@@ -197,6 +197,21 @@ button {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .main-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav__item {
+    border: none;
+    margin-right: 20px;
+  }
+  .main-nav__item:last-child {
+    border: none;
+  }
+}
+
 .header {
   min-height: 128px;
 }
@@ -296,6 +311,41 @@ button {
 
 .header__search--catalog {
   background-color: #dccac6;
+}
+
+@media (max-width: 767px) {
+  .main-nav--hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 708px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header__wrapper {
+    display: none;
+  }
+  .header__form {
+    display: none;
+  }
 }
 
 .cards {
@@ -411,13 +461,14 @@ button {
   background-color: #000405;
   color: #fbf6fb;
   font-family: "Rubik Bold", sans-serif;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .item__body {
@@ -460,6 +511,23 @@ button {
   background-color: transparent;
 }
 
+.item__top-panel span {
+  font-size: 1em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  -webkit-animation: marquee 4s linear infinite;
+          animation: marquee 4s linear infinite;
+}
+
+.item__top-panel span:nth-child(1) {
+  position: absolute;
+  left: -100%;
+  -webkit-animation: marquee 4s 2s linear infinite;
+          animation: marquee 4s 2s linear infinite;
+}
+
 @media (min-width: 768px) {
   .item__top-panel {
     font-size: 20px;
@@ -469,6 +537,32 @@ button {
 @media (min-width: 1280px) {
   .item__title {
     font-size: 20px;
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    left: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    left: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 

@@ -88,3 +88,33 @@
 .header__search--catalog {
     background-color: $mainColor;
 }
+
+@media (max-width: $max-width-mb) {
+    .main-nav--hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+@media (min-width: $width-tb) {
+    .header {
+        width: 708px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header__wrapper {
+        display: none;
+    }
+    .header__form {
+        display: none;
+    }
+}
