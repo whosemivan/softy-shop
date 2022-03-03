@@ -1,7 +1,7 @@
 const express = require("express");
-const serverRouter = require("./server/routes/main-router");
+const serverRouter = require("./server/routes/mainRouter");
 const dbRouter = require("./server/routes/dbRouter");
-const authRouter = require("./server/routes/authorization/auth-router");
+const authRouter = require("./server/routes/authorization/authRouter");
 const hbs = require('hbs');
 
 const app = express();

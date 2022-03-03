@@ -4,24 +4,24 @@
         <p class="catalog-first-screen__text">Пижама мягкая как сны</p>
         <a class="catalog-first-screen__link" href="#">Смотреть</a>
     </section>
-    <section class="catalog">
-        <h2 class="catalog__title visually-hidden">Наши предложения</h2>
-        <div class="catalog__filter">
-            <div class="catalog__filter-wrapper">
-                <div class="catalog__filter-sort">
-                    <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
-                    <select class="catalog__filter-sort-select" name="sort" id="sort">
-                        <option value="freshness">Новинки</option>
-                        <option value="priceincr">Цена по возрастанию</option>
-                        <option value="pricedecr">Цена по убыванию</option>
-                    </select>
-                </div>
-                <div class="catalog__filter-filter">
-                    <button class="catalog__filter-filter-btn" type="button">Фильтр</button>
-                </div>
+    <section class="catalog__filter">
+        <h3 class="visually-hidden">Фильтр</h3>
+        <div class="catalog__filter-wrapper">
+            <div class="catalog__filter-sort">
+                <label class="catalog__filter-sort-label" for="sort">Сортировать</label>
+                <select class="catalog__filter-sort-select" name="sort" id="sort">
+                    <option value="freshness">Новинки</option>
+                    <option value="priceincr">Цена по возрастанию</option>
+                    <option value="pricedecr">Цена по убыванию</option>
+                </select>
+            </div>
+            <div class="catalog__filter-filter">
+                <button class="catalog__filter-filter-btn" type="button">Фильтр</button>
             </div>
         </div>
-
+    </section>
+    <section class="main-body">
+        <h2 class="visually-hidden">Наши предложения</h2>
         <section class="cards">
             <h1 class="cards__title">Популярные пижамы</h1>
             <div class="cards__items">
@@ -36,8 +36,8 @@
 
             <div class="cards__link-wrapper flex-helper"><a href="/catalog" class="cards__link">Смотреть все</a></div>
         </section>
+        {{> sub_block}}
     </section>
-    {{> sub_block}}
 </main>
 {{> footer}}
 <script src="/js/getPajama.js"></script>

@@ -106,10 +106,14 @@
 
 @media (min-width: $width-tb) {
     .header {
-        width: 708px;
+        width: 50%;
         margin: 0 auto;
+        margin-right: 0;
         display: flex;
         justify-content: flex-end;
+    }
+    .header--catalog {
+        width: 100%;
     }
     .header__wrapper {
         display: none;

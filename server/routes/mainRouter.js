@@ -10,6 +10,7 @@ router.get("/catalog", (req, res) => {
     res.render("catalog", {
         title: "Каталог",
         className: "body-catalog",
+        classNameForNav: "header--catalog",
         searchClassName: "header__search--catalog"
     });
 });

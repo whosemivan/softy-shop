@@ -13,11 +13,11 @@
             </defs>
         </svg>
         <h1>Регистрация</h1>
-        <form action="" class="flex-helper" id="registrationForm">
-            <input type="text" name="login" placeholder="Логин" id="form__login-input">
+        <form action="" method="post" class="flex-helper" id="registrationForm">
+            <input type="text" name="login" placeholder="Логин" title="Придумайти логин состоящий из латинских букв. Максимальная длина 12 символов." pattern="[0-9A-Za-z]{3,12}" required id="form__login-input">
             <input type="text" name="name" placeholder="Имя" id="form__name-input">
             <input type="text" name="surname" placeholder="Фамилия" id="form__surname-input">
-            <input type="text" name="password" placeholder="Пароль" id="form__password-input">
+            <input type="password" name="password" placeholder="Пароль" pattern="[0-9A-Za-z]{3,8}" required id="form__password-input">
             <button id="form__accept">Войти</button>
         </form>
         <p class="auth-form__title">Если у вас уже есть аккаунт - <a href="/auth/login">страница входа</a></p>

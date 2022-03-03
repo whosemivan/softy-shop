@@ -13,15 +13,15 @@ class authController {
             const table = client.db("auth");
             const col = table.collection("users");
             try {
-                const {username} = req.body;
-                const user = col.findOne({username});
+                const {login} = req.body;
+                const user = col.findOne({login});
                 user.then((e) => {
-                    if (e) { return res.send({msg: "Имя пользователя занято"}); };
+                    if (e) { return res.send({msg: {status: 400, text: "Имя пользователя занято"}}); };
                     col.insertOne(req.body, err => {
                         if (err) {
                             console.log(err);
                         } else {
-                            res.send({msg: "Регистрация прошла успешно"});
+                            res.send({msg: {status: 200, text: "Регистрация прошла успешно"}});
                         }
                     });
                 });
@@ -44,17 +44,18 @@ class authController {
             const table = client.db("auth");
             const col = table.collection("users");
             try {
-                const {username, password} = req.body;
-                const user = col.findOne({username});
+                const {login, password} = req.body;
+                const user = col.findOne({login});
                 user.then((e) => {
                     if (!e) {
-                        return res.send({msg: "Пользователь не существует"});
+                        return res.send({msg: {status: 401, text: "Пользователь не существует"}});
                     };
     
-                    if (password == e["password"]) {
-                        return res.send({msg: "Авторизация прошла успешно", data: e["_id"]});
+                    if (login == e["login"] && password == e["password"]) {
+                        console.log(e["password"])
+                        return res.send({msg: {status: 201, text: "Авторизация прошла успешно"}, data: e["_id"]});
                     } else {
-                        return res.send({msg: "Пароль не подходит"});
+                        return res.send({msg: {status: 402, text: "Пароль не подходит"}});
                     };
                 });
             } catch (e) {
@@ -80,7 +81,7 @@ class authController {
                 res.json(users);
             } catch (e) {
                 console.log(e);
-        };
+            };
         });
         client.close();
     };
